@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HexScroll</string>
+    <string name="accessibility_service_description">HexScroll monitors short-form video feeds and applies your chosen blocking strategy to help you scroll less.</string>
+</resources>

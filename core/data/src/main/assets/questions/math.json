@@ -1,0 +1,22 @@
+[
+  {"id":"math_001","topic":"MATH","prompt":"What is 15% of 200?","options":["25","30","35","40"],"correctIndex":1,"explanation":"15% of 200 = 0.15 × 200 = 30."},
+  {"id":"math_002","topic":"MATH","prompt":"If you flip a fair coin twice, what is the probability of getting two heads?","options":["1/4","1/3","1/2","3/4"],"correctIndex":0,"explanation":"P(H) = 1/2 for each flip; P(HH) = 1/2 × 1/2 = 1/4."},
+  {"id":"math_003","topic":"MATH","prompt":"What is the value of π (pi) to two decimal places?","options":["3.12","3.14","3.16","3.18"],"correctIndex":1,"explanation":"π ≈ 3.14159... rounded to two decimal places is 3.14."},
+  {"id":"math_004","topic":"MATH","prompt":"Solve for x: 2x + 6 = 14","options":["3","4","5","6"],"correctIndex":1,"explanation":"2x + 6 = 14 → 2x = 8 → x = 4."},
+  {"id":"math_005","topic":"MATH","prompt":"What is the area of a circle with radius 5?","options":["25π","10π","50π","5π"],"correctIndex":0,"explanation":"Area = πr² = π × 5² = 25π ≈ 78.54 square units."},
+  {"id":"math_006","topic":"MATH","prompt":"What is the sum of the interior angles of a triangle?","options":["90°","180°","270°","360°"],"correctIndex":1,"explanation":"The sum of interior angles of any triangle is always 180°."},
+  {"id":"math_007","topic":"MATH","prompt":"What is 7 factorial (7!)?","options":["2520","5040","720","40320"],"correctIndex":1,"explanation":"7! = 7×6×5×4×3×2×1 = 5040."},
+  {"id":"math_008","topic":"MATH","prompt":"If a shirt costs $80 and is 25% off, what is the sale price?","options":["$55","$60","$65","$70"],"correctIndex":1,"explanation":"25% of $80 = $20 discount. $80 - $20 = $60."},
+  {"id":"math_009","topic":"MATH","prompt":"What is the Pythagorean theorem?","options":["a + b = c","a² + b² = c²","a × b = c²","(a + b)² = c"],"correctIndex":1,"explanation":"For a right triangle with legs a and b and hypotenuse c: a² + b² = c²."},
+  {"id":"math_010","topic":"MATH","prompt":"What is the median of this set: {3, 7, 2, 9, 5}?","options":["3","5","7","9"],"correctIndex":1,"explanation":"Sorted: {2, 3, 5, 7, 9}. The middle value is 5."},
+  {"id":"math_011","topic":"MATH","prompt":"How many prime numbers are there between 1 and 20?","options":["6","7","8","9"],"correctIndex":2,"explanation":"Primes between 1 and 20: 2, 3, 5, 7, 11, 13, 17, 19 — that's 8 primes."},
+  {"id":"math_012","topic":"MATH","prompt":"What is the slope-intercept form of a linear equation?","options":["ax + by = c","y = mx + b","x = my + b","y - y₁ = m(x - x₁)"],"correctIndex":1,"explanation":"y = mx + b is the slope-intercept form where m is the slope and b is the y-intercept."},
+  {"id":"math_013","topic":"MATH","prompt":"What is 2⁸?","options":["128","256","512","64"],"correctIndex":1,"explanation":"2⁸ = 2×2×2×2×2×2×2×2 = 256."},
+  {"id":"math_014","topic":"MATH","prompt":"What is the probability of rolling a 6 on a standard die?","options":["1/3","1/4","1/5","1/6"],"correctIndex":3,"explanation":"A standard die has 6 faces, each equally likely. P(6) = 1/6."},
+  {"id":"math_015","topic":"MATH","prompt":"What is the GCD (greatest common divisor) of 24 and 36?","options":["6","8","12","18"],"correctIndex":2,"explanation":"Factors of 24: 1,2,3,4,6,8,12,24. Factors of 36: 1,2,3,4,6,9,12,18,36. GCD = 12."},
+  {"id":"math_016","topic":"MATH","prompt":"If a = 3 and b = 4, what is √(a² + b²)?","options":["5","7","6","8"],"correctIndex":0,"explanation":"√(9 + 16) = √25 = 5. This is a classic 3-4-5 Pythagorean triple."},
+  {"id":"math_017","topic":"MATH","prompt":"What is 0.1 + 0.2 as an exact fraction?","options":["1/3","3/10","3/100","1/5"],"correctIndex":1,"explanation":"0.1 = 1/10, 0.2 = 2/10, sum = 3/10."},
+  {"id":"math_018","topic":"MATH","prompt":"How many degrees are in a full circle?","options":["180°","270°","360°","400°"],"correctIndex":2,"explanation":"A full circle measures 360°. A straight line is 180° and a right angle is 90°."},
+  {"id":"math_019","topic":"MATH","prompt":"What is the next term in the Fibonacci sequence: 1, 1, 2, 3, 5, 8, ...?","options":["11","12","13","15"],"correctIndex":2,"explanation":"Each Fibonacci term is the sum of the two preceding ones: 5 + 8 = 13."},
+  {"id":"math_020","topic":"MATH","prompt":"What is the volume of a cube with side length 4?","options":["16","48","64","32"],"correctIndex":2,"explanation":"Volume = side³ = 4³ = 64 cubic units."}
+]
