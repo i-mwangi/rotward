@@ -18,6 +18,7 @@ object HauntAssets {
         "haunt/images/home-trees.png",
         "haunt/images/pumpkin_pile.png",
         "haunt/images/skulls.png",
+        "haunt/images/logo.gif",
     )
     val sounds = listOf(
         "haunt/sounds/creepy_music.mp3",
