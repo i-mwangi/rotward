@@ -54,6 +54,10 @@ class HomeViewModel @Inject constructor(
             _uiState.update { it.copy(
                 hasSeenAccessibilityExplainer = userSettingsStore.hasSeenAccessibilityExplainer(),
                 hasCompletedTopicOnboarding = userSettingsStore.hasCompletedTopicOnboarding(),
+                intervalAllowance = userSettingsStore.getIntervalAllowance(),
+                intervalLength = userSettingsStore.getIntervalLength(),
+                hauntCooldownUntil = userSettingsStore.getHauntCooldownUntil(),
+                totalDailyUsageMillis = userSettingsStore.getTotalDailyUsage(),
             )}
         }
     }
@@ -62,7 +66,13 @@ class HomeViewModel @Inject constructor(
     }
     fun setBlockOption(o: BlockOption) { viewModelScope.launch { userSettingsStore.setBlockOption(o) } }
     fun setTimeLimit(m: Long) { viewModelScope.launch { userSettingsStore.setTimeLimit(m) } }
+    fun setIntervalSettings(allowance: Long, brk: Long) { viewModelScope.launch { userSettingsStore.setIntervalAllowance(allowance); userSettingsStore.setIntervalLength(brk) } }
     fun setTimerOverlayEnabled(e: Boolean) { viewModelScope.launch { userSettingsStore.setTimerOverlayEnabled(e) } }
     fun setLearningGateEnabled(e: Boolean) { viewModelScope.launch { userSettingsStore.setLearningGateEnabled(e) } }
     fun markAccessibilityExplainerSeen() { viewModelScope.launch { userSettingsStore.setHasSeenAccessibilityExplainer(true) } }
+    // Debug functions — only called from DebugSessionPanel in DEBUG builds
+    fun debugSimulateQuiz() { viewModelScope.launch { userSettingsStore.setHauntCooldownUntil(0L) } }
+    fun debugSimulateHaunt() { viewModelScope.launch { userSettingsStore.setHauntCooldownUntil(System.currentTimeMillis() + 180_000L) } }
+    fun debugSimulateCooldown() { viewModelScope.launch { userSettingsStore.setHauntCooldownUntil(System.currentTimeMillis() + 60_000L) } }
+    fun debugInjectUsage() { viewModelScope.launch { userSettingsStore.setTotalDailyUsage(userSettingsStore.getTotalDailyUsage() + 300_000L) } }
 }

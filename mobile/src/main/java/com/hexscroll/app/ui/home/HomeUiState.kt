@@ -5,6 +5,8 @@ data class HomeUiState(
     val hasLoadedSettings: Boolean = false,
     val blockOption: BlockOption = BlockOption.NothingSelected,
     val timeLimit: Long = 900_000L,
+    val intervalAllowance: Long = 300_000L,
+    val intervalLength: Long = 900_000L,
     val timerOverlayEnabled: Boolean = true,
     val pauseUntil: Long = 0L,
     val learningGateEnabled: Boolean = false,
