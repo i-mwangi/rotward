@@ -2,6 +2,7 @@
 package com.hexscroll.app.ui.home
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.*
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -67,6 +68,8 @@ fun HomeScreen(onNavigateToTopicPicker: (Boolean) -> Unit, viewModel: HomeViewMo
             colors = TopAppBarDefaults.topAppBarColors(containerColor = Background)) },
         containerColor = Background,
     ) { padding ->
+        Box(modifier = Modifier.fillMaxSize()) {
+            Box(modifier = Modifier.fillMaxSize().padding(padding).background(Brush.radialGradient(colors = listOf(HolographicElectricSky.copy(alpha = 0.08f), HolographicVioletGlow.copy(alpha = 0.06f), HolographicNeonMint.copy(alpha = 0.04f), MaterialTheme.colorScheme.background), radius = 1200f)))
         Column(modifier = Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).padding(horizontal = 16.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp), horizontalAlignment = Alignment.CenterHorizontally) {
 
@@ -148,12 +151,13 @@ fun HomeScreen(onNavigateToTopicPicker: (Boolean) -> Unit, viewModel: HomeViewMo
             }
             Spacer(Modifier.height(16.dp))
         }
+        }
     }
 }
 
 @Composable
 private fun UsageDonut(uiState: HomeUiState, size: Dp = 240.dp, strokeWidth: Dp = 18.dp) {
-    val appColors = listOf(CrimsonAccent, Color(0xFF4FC3F7), Color(0xFFFF6B9D), Color(0xFF64B5F6))
+    val appColors = listOf(InstagramReelsColor, YouTubeShortsColor, TikTokColor, FacebookReelsColor)
     val appLabels = listOf("Reels", "Shorts", "TikTok", "FB Reels")
     val appUsages = listOf(uiState.reelsDailyUsageMillis, uiState.shortsDailyUsageMillis, uiState.tiktokDailyUsageMillis, uiState.facebookReelsDailyUsageMillis)
     val limitMs = if (uiState.timeLimit > 0) uiState.timeLimit else 900_000L
