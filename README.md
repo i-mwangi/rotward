@@ -274,6 +274,26 @@ Run tests:
 
 ---
 
+## What's Next
+
+### Custom Question Packs
+The Learning Gate currently uses 6 built-in topics with 120 questions. The next version will let you build and use your own:
+
+- **Create custom topics** — name them anything (KCSE Biology, French Vocab, AWS Prep, anything you are studying)
+- **Add questions manually** — type your question, 4 options, correct answer, and explanation directly in the app
+- **Import from JSON** — prepare a question pack on your computer and load it via file picker
+- **Export packs** — back up or share your custom pack as a JSON file
+
+This turns every scroll attempt into a revision session for whatever you are actively studying.
+
+### On the Roadmap
+- Timeline bar on the home screen showing session blocks by hour
+- Weekly average bar chart (Mon–Sun)
+- In-app background service warning with phone-specific fix instructions
+- Screenshots in this README
+
+---
+
 ## License
 
 MIT License
