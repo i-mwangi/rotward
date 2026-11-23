@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "Android Code Quality Analyzer",
+  "description": "Monitors Kotlin source files for changes and provides automated analysis of code quality, module boundary violations, threading issues, and Android-specific best practices.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.kt",
+      "**/*.kts",
+      "**/src/**/*.kt"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A Kotlin source file has been modified in the HexScroll Android project. Please analyze the changes for:\n\n1. **Module Boundaries**: core:domain must not import android.* or androidx.room.*; core:designsystem must not import domain or data packages\n2. **Threading**: WindowManager calls must be on Dispatchers.Main; Room DAO calls must be on Dispatchers.IO\n3. **Overlay Safety**: Any ComposeView added to WindowManager must use OverlayLifecycleOwner and advance lifecycle through ON_CREATE, ON_START, ON_RESUME in order\n4. **KSP Usage**: Ensure no kapt annotations are used; all annotation processing uses KSP\n5. **Coroutine Scope**: Check for GlobalScope usage which should be avoided; prefer viewModelScope or serviceScope\n6. **Null Safety**: Flag any !! operators that could be replaced with safer alternatives\n7. **Code Smells**: Long functions, duplicate logic, missing error handling in try/catch blocks\n\nProvide specific, actionable suggestions while respecting the existing clean architecture pattern."
+  }
+}

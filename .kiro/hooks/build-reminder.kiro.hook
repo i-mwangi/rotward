@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Build and Release Reminder",
+  "description": "Reminds the developer to rebuild the APK, commit source changes, push to GitHub, and optionally create a new GitHub Release after any meaningful code changes.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The developer has made changes to the HexScroll Android project. Please:\n\n1. Run the build gate: ./gradlew :mobile:assembleDebug (and optionally :core:domain:test :core:data:testDebugUnitTest)\n2. Stage only source files: git add mobile/src core/ gradle/ .kiro/ — never add build/ .gradle/ *.apk\n3. Commit with a descriptive message following the pattern: vX.Y.Z: brief description of changes\n4. Push to origin master\n5. If this is a release: gh release create vX.Y.Z mobile/build/outputs/apk/debug/mobile-debug.apk --repo i-mwangi/rotward --title HexScroll vX.Y.Z --notes changelog\n\nThe APK is always at: mobile/build/outputs/apk/debug/mobile-debug.apk"
+  }
+}
